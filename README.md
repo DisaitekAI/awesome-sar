@@ -24,24 +24,24 @@ Inspired by [awesome-python](https://github.com/vinta/awesome-python).
 ## General
 Software capable of multiple processing steps
 
-* [SNAP](http://step.esa.int/main/toolboxes/snap/) - Sentinel Application Platform.
-* [Orfeo Toolbox (OTB)](https://www.orfeo-toolbox.org/) - Open Source processing of remote sensing images ([github](https://github.com/orfeotoolbox/OTB), [Cookbook](https://www.orfeo-toolbox.org/CookBook/recipes/sarprocessing.html): [SAR Processing](https://www.orfeo-toolbox.org/CookBook/recipes/sarprocessing.html), [Guide](http://orfeo-toolbox.org/SoftwareGuide/))
-* [SARbian](https://eo-college.org/sarbian/) - free and open SAR operating system 
+* [SNAP](http://step.esa.int/main/toolboxes/snap/) - Sentinel Application Platform: works on Java, doesn't build itself well, some features are outdated
+* [Orfeo Toolbox (OTB)](https://www.orfeo-toolbox.org/) - Open Source processing of remote sensing images ([github](https://github.com/orfeotoolbox/OTB), [Cookbook](https://www.orfeo-toolbox.org/CookBook/recipes/sarprocessing.html): [SAR Processing](https://www.orfeo-toolbox.org/CookBook/recipes/sarprocessing.html), [Guide](http://orfeo-toolbox.org/SoftwareGuide/)): has Python bindings from C code
+* [SARbian](https://eo-college.org/sarbian/) - free and open SAR operating system: complete OS with multiple SAR softwares (like SNAP). Contains Python, R, Julia and MATLAB (Octave).
 
 ## InSAR Processing Software
 
 *Software and libraries for interferometric synthetic aperture radar (InSAR)*
 
-* [GMT5SAR](https://topex.ucsd.edu/gmtsar/) - InSAR processing system based on GMT. ([page for developers](http://gmt.soest.hawaii.edu/projects/gmt5sar))
-* [ISCE](http://winsar.unavco.org/software/isce) - InSAR Scientific Computing Environment.
-* [Doris](http://doris.tudelft.nl/) - Delft object-oriented radar interferomtric software.
-* [Gamma ($$)](http://www.gamma-rs.ch/no_cache/software.html) - Gamma Remote Sensing SAR and Interferometry Software.
+* [GMT5SAR](https://topex.ucsd.edu/gmtsar/) - InSAR processing system based on GMT. ([page for developers](http://gmt.soest.hawaii.edu/projects/gmt5sar)): written in C, downloadable under `tar.gz` files.
+* [ISCE](http://winsar.unavco.org/software/isce) - InSAR Scientific Computing Environment: now at [ISCE2](https://github.com/isce-framework/isce2).
+* [Doris](http://doris.tudelft.nl/) - Delft object-oriented radar interferomtric software: outdated from 2008
+* [Gamma ($$)](http://www.gamma-rs.ch/no_cache/software.html) - Gamma Remote Sensing SAR and Interferometry Software: proprietary, can be bound to Python and MATLAB.
 
 ## PolSAR Processing Software
 
 *Software and libraries for polarimetric and polarimetric interferometric SAR (PolSAR / PolInSAR)*
 
-* [PolSARPro](https://earth.esa.int/web/polsarpro) - The ESA Polarimetric SAR Data Processing and Educational Tool
+* [PolSARPro](https://earth.esa.int/web/polsarpro) - The ESA Polarimetric SAR Data Processing and Educational Tool: on the same vein than SNAP.
 * [RAT](https://rat.radartools.org) - RAT Radar Tools (discontinued)
 
 ## Time Series Analysis Software
@@ -67,7 +67,7 @@ Software capable of multiple processing steps
 *Libraries useful for geospatial and post-processing analysis of SAR data*
 
 * [ASF Map Ready](https://github.com/asfadmin/ASF_MapReady) - MapReady Remote Sensing Tool Kit
-* [GDAL](https://github.com/OSGeo/gdal) - Geospatial Data Abstraction Library
+* [GDAL](https://github.com/OSGeo/gdal) - Geospatial Data Abstraction Library: already comes with `rasterio` and other Python libraries opening geospatial data.
 * [GMT](http://gmt.soest.hawaii.edu/projects/gmt) - Generic Mapping Tools
 * [QGIS](https://www.qgis.org/)
 * [GRASS](https://grass.osgeo.org/) - Geographic Resources Analysis Support System),
@@ -77,8 +77,8 @@ Software capable of multiple processing steps
 *Collect and classify open projects on GitHub related to SAR*
 
 * Data discovery and download
-    * [SSARA](https://github.com/bakerunavco/SSARA) - Seamless SAR Archive project repository
-    * [ArchiveTools](https://github.com/bakerunavco/Archive-Tools) - Scripts for downloading and searching data
+    * ~~[SSARA](https://github.com/bakerunavco/SSARA) - Seamless SAR Archive project repository~~
+    * ~~[ArchiveTools](https://github.com/bakerunavco/Archive-Tools) - Scripts for downloading and searching data~~
     * [SentinelSat](https://github.com/ibamacsr/sentinelsat) - Search and download Sentinel images from the command line or with the Python API.
 
 * Software and Utilities
@@ -108,10 +108,10 @@ Software capable of multiple processing steps
 
 ## Relevant Image processing libraries
 
-* [OpenCV](http://opencv.org/)
-* [Scikit-Image](http://scikit-image.org/)
+* [OpenCV](http://opencv.org/): Already in use
+* [Scikit-Image](http://scikit-image.org/): OpenCV and Numpy are satisfying enough
 * [Insight Segmentation and Registration Toolkit (ITK)](https://itk.org/) - open-source, cross-platform system that provides developers with an extensive suite of software tools for image analysis 
-* [Spectral Python (SPy)](https://www.spectralpython.net/index.html) - Python module for processing hyperspectral image data
+* [Spectral Python (SPy)](https://www.spectralpython.net/index.html) - Python module for processing hyperspectral image data: Outdated but might be usuable
 
 
 # Resources
@@ -123,7 +123,7 @@ Where to discover new SAR libraries and resources.
 * [ARIA-products](http://aria-products.jpl.nasa.gov/) - Standard products of the Advanced Rapid Imaging and Analysis (ARIA) Project for Natural Hazards
 * [DLR Geohazards Supersites](https://supersites.eoc.dlr.de/) - TerraSAR-X Geohazard Supersites EO Data Gateway
 * [ESA Virtual Archive 4](http://eo-virtual-archive4.esa.int/) - Geohazard Supersites and Natural Laboratories Virtual Archive
-* [SciHub](https://scihub.copernicus.eu/) - Sentinel Scientific Data Hub
+* [SciHub](https://scihub.copernicus.eu/) - Sentinel Scientific Data Hub: could fetch data from the API
 * [UNAVCO/WInSAR](http://www.unavco.org/data/imaging/sar) - WInSAR consortium and GeoEarthScope Data
 
 ## Websites
